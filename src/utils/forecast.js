@@ -9,6 +9,7 @@ const forecast=(longitude,latitude,callback)=>{
             callback('wrong coordinates. Please make sure you wrote correct data',undefined)
         }else {
             callback(undefined,"Temperature: "+body.current.weather_descriptions[0]+" but feels like "+body.current.feelslike);
+            //simple text
         }
     })
 }
