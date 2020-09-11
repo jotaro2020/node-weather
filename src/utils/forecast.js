@@ -8,7 +8,7 @@ const forecast=(longitude,latitude,callback)=>{
         }else if(body.error){
             callback('wrong coordinates. Please make sure you wrote correct data',undefined)
         }else {
-            callback(undefined,"Temperature: "+body.current.weather_descriptions[0]+" but feels like "+body.current.feelslike);
+            callback(undefined,"Temperature: "+body.current.weather_descriptions[0]+" but feels like "+body.current.feelslike+". There is "+body.current.precip*100+"% chance of rain");
             //simple text
         }
     })
